@@ -7,7 +7,7 @@ import java.util.List;
  * Created by rajorea on 06/08/16.
  */
 
-public class IPSResponse {
+public class  IPSResponse {
 
     private String ipsId;
     private Date updatedDate;
@@ -45,5 +45,15 @@ public class IPSResponse {
 
     public void setPayload(List<MyPayload> payload) {
         this.payload = payload;
+    }
+
+    @Override
+    public String toString() {
+        return "IPSResponse{" +
+                "ipsId='" + ipsId + '\'' +
+                ", updatedDate=" + updatedDate +
+                ", status='" + status + '\'' +
+                ", payload=" + payload +
+                '}';
     }
 }

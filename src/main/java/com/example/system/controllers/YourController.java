@@ -21,10 +21,14 @@ public class YourController {
      * You may choose to create a service that will be called from this contoller.
      * I have created it in this way.
      */
-    @RequestMapping("/rest/ipsdata")
-    public IPSResponse getIPSData()
+    @RequestMapping("/rest/process/ipsdata")
+    public String getIPSData()
     {
-        return yourService.getDataFromIPSSystem();
+        System.out.println("************** Processing data started ********");
+        yourService.processIPSData();
+        System.out.println("************** Processing data ended ********");
+
+        return "success";
     }
 
 }

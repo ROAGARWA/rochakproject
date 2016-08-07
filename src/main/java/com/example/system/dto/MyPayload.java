@@ -34,5 +34,12 @@ public class MyPayload {
     private String payload;
     private double amount;
 
-
+    @Override
+    public String toString() {
+        return "{" +
+                "orderId='" + orderId + '\'' +
+                ", payload='" + payload + '\'' +
+                ", amount=" + amount +
+                '}';
+    }
 }
